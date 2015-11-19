@@ -1,1 +1,1 @@
-./HelloWorld/Readme.md
+HelloWorld/Readme.md
