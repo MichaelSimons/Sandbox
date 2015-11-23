@@ -5,4 +5,4 @@ RUN echo "deb [arch=amd64] http://apt-mo.trafficmanager.net/repos/dotnet/ trusty
     && apt-get update \
     && apt-get install -y dotnet
     
-RUN mkdir /myapp/
+RUN mkdir /foo/
