@@ -30,8 +30,8 @@ namespace Samples
                     continue;
                 }
 
-                string isPalindromePhrase = isPalindrome ? "is" : "is not";
-                outputBuilder.AppendLine($"'{input.Item1}' {isPalindromePhrase} a palindrome.");
+                string result = isPalindrome == input.Item2 ? "Success" : "Failure";
+                outputBuilder.AppendLine($"'{input.Item1}' - {result}");
             }
 
             string output = outputBuilder.ToString();
