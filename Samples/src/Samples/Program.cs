@@ -7,18 +7,19 @@ namespace Samples
     {
         public static void Main(string[] args)
         {
-            Tuple<string, bool>[] testInput = new Tuple<string, bool>[]
+            Tuple<string, bool, bool>[] testInput = new Tuple<string, bool, bool>[]
                 {
-                    Tuple.Create("", true),
-                    Tuple.Create(" ", true),
-                    Tuple.Create("a", true),
-                    Tuple.Create("aa", true),
-                    Tuple.Create("ab", false),
-                    Tuple.Create("aba", true),
-                    Tuple.Create("ab a", false),
-                    Tuple.Create("rotator", true),
-                    Tuple.Create("Rotator", false),
-                    Tuple.Create("A nut for a jar of tuna.", false),
+                    Tuple.Create("", false, true),
+                    Tuple.Create(" ", false, true),
+                    Tuple.Create("a", false,true),
+                    Tuple.Create("aa", false,true),
+                    Tuple.Create("ab", false,false),
+                    Tuple.Create("aba", false,true),
+                    Tuple.Create("ab a", false,false),
+                    Tuple.Create("ab a", true,true),
+                    Tuple.Create("rotator", false,true),
+                    Tuple.Create("Rotator", false,false),
+                    Tuple.Create("A nut for a jar of tuna.", false,false),
                 };
 
             Task[] tasks = new Task[]
@@ -34,21 +35,44 @@ namespace Samples
 
         private static bool IsPalindromeOption1(string input)
         {
+            return Program.IsPalindromeOption1(input, false);
+        }
+
+        private static bool IsPalindromeOption1(string input, bool ignoreSpace)
+        {
             if (input == null)
             {
                 throw new ArgumentNullException(nameof(input));
             }
 
-            string revInput = "";
-            foreach (char c in input)
+            string processedInput = "";
+            if (ignoreSpace)
             {
-                revInput = revInput.Insert(0, c.ToString());
+                for (int i = 0; i < input.Length; i++)
+                {
+                    if (input[i] == ' ')
+                    {
+                        continue;
+                    }
+
+                    processedInput += input[i];
+                }
+            }
+            else
+            {
+                processedInput = input;
             }
 
-            return string.Equals(input, revInput, StringComparison.Ordinal);
+            string revInput = "";
+            for (int i = processedInput.Length - 1; i >= 0; i--)
+            {
+                revInput += processedInput[i];
+            }
+
+            return string.Equals(processedInput, revInput, StringComparison.Ordinal);
         }
 
-        private static bool IsPalindromeOption2(string input)
+        private static bool IsPalindromeOption2(string input, bool ignoreSpace)
         {
             if (input == null)
             {

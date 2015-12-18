@@ -5,23 +5,23 @@ using System.Threading.Tasks;
 
 namespace Samples
 {
-    public static class Validator
+    public class Validator
     {
         public static async Task ValidateAsync(
             string implementationName,
-            Func<string, bool> implementation,
-            Tuple<string, bool>[] testInput)
+            Func<string, bool, bool> implementation,
+            Tuple<string, bool, bool>[] testInput)
         {
             StringBuilder outputBuilder = new StringBuilder();
             outputBuilder.AppendLine(implementationName);
             outputBuilder.AppendLine("----------------------------");
 
-            foreach (Tuple<string, bool> input in testInput)
+            foreach (Tuple<string, bool, bool> input in testInput)
             {
                 bool isPalindrome;
                 try
                 {
-                    isPalindrome = implementation(input.Item1);
+                    isPalindrome = implementation(input.Item1, input.Item2);
                 }
                 catch (Exception ex)
                 {
@@ -30,7 +30,7 @@ namespace Samples
                     continue;
                 }
 
-                string result = isPalindrome == input.Item2 ? "Success" : "Failure";
+                string result = isPalindrome == input.Item3 ? "Success" : "Failure";
                 outputBuilder.AppendLine($"'{input.Item1}' - {result}");
             }
 
