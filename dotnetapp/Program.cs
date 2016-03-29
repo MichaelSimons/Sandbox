@@ -7,7 +7,8 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             Console.ReadLine();
-            Console.WriteLine("Hello World!");
+	    string message = "Hello World!";
+            Console.WriteLine(message);
         }
     }
 }
