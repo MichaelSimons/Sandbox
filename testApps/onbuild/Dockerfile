@@ -1,1 +1,1 @@
-FROM msimons/dotnet:1.0.0-rc2-onbuild
+FROM msimons/dotnet:1.0.0-preview1-onbuild
