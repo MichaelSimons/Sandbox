@@ -1,7 +1,8 @@
 {
   "version": "1.0.0-*",
-  "compilationOptions": {
-    "emitEntryPoint": true
+  "buildOptions": {
+    "emitEntryPoint": true,
+	"debugType": "portable"
   },
   "dependencies": {
     "Microsoft.NETCore.App": {
