@@ -6,17 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "dotnet/1.0.0-preview3-003212": {
+      "dotnet/1.0.0-preview3": {
         "dependencies": {
           "NuGet.Commands": "3.5.0-beta2-1484",
           "NuGet.CommandLine.XPlat": "3.5.0-beta2-1484",
           "Newtonsoft.Json": "9.0.1",
           "Microsoft.ApplicationInsights": "2.0.0",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212",
-          "Microsoft.DotNet.Compiler.Common": "1.0.0-preview3-003212",
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3-003212",
-          "Microsoft.Extensions.Testing.Abstractions": "1.0.0-preview3-003212",
-          "Microsoft.DotNet.Configurer": "1.0.0-rc3-003212",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4",
+          "Microsoft.DotNet.Compiler.Common": "1.0.0-preview3",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3",
+          "Microsoft.Extensions.Testing.Abstractions": "1.0.0-preview3",
+          "Microsoft.DotNet.Configurer": "1.0.0-rc3",
           "System.Diagnostics.TraceSource": "4.0.0",
           "System.Diagnostics.TextWriterTraceListener": "4.0.0",
           "System.Resources.Writer": "4.0.0",
@@ -285,14 +285,14 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Microsoft.DotNet.Archive/1.0.0-preview3-003212": {
+      "Microsoft.DotNet.Archive/1.0.0-preview3": {
         "runtime": {
           "Microsoft.DotNet.Archive.dll": {}
         }
       },
-      "Microsoft.DotNet.Cli.Utils/1.0.0-preview3-003212": {
+      "Microsoft.DotNet.Cli.Utils/1.0.0-preview3": {
         "dependencies": {
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4",
           "NuGet.Versioning": "3.5.0-beta2-1484",
           "NuGet.Packaging": "3.5.0-beta2-1484",
           "NuGet.Frameworks": "3.5.0-beta2-1484",
@@ -302,45 +302,45 @@
           "Microsoft.DotNet.Cli.Utils.dll": {}
         }
       },
-      "Microsoft.DotNet.Compiler.Common/1.0.0-preview3-003212": {
+      "Microsoft.DotNet.Compiler.Common/1.0.0-preview3": {
         "dependencies": {
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212",
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3-003212",
-          "Microsoft.DotNet.Files": "1.0.0-preview3-003212"
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3",
+          "Microsoft.DotNet.Files": "1.0.0-preview3"
         },
         "runtime": {
           "Microsoft.DotNet.Compiler.Common.dll": {}
         }
       },
-      "Microsoft.DotNet.Configurer/1.0.0-rc3-003212": {
+      "Microsoft.DotNet.Configurer/1.0.0-rc3": {
         "dependencies": {
-          "Microsoft.DotNet.InternalAbstractions": "1.0.1-beta-003212",
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3-003212",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212",
-          "Microsoft.DotNet.Archive": "1.0.0-preview3-003212"
+          "Microsoft.DotNet.InternalAbstractions": "1.0.1-beta",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4",
+          "Microsoft.DotNet.Archive": "1.0.0-preview3"
         },
         "runtime": {
           "Microsoft.DotNet.Configurer.dll": {}
         }
       },
-      "Microsoft.DotNet.Files/1.0.0-preview3-003212": {
+      "Microsoft.DotNet.Files/1.0.0-preview3": {
         "dependencies": {
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3-003212",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212"
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview3",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4"
         },
         "runtime": {
           "Microsoft.DotNet.Files.dll": {}
         }
       },
-      "Microsoft.DotNet.InternalAbstractions/1.0.1-beta-003212": {
+      "Microsoft.DotNet.InternalAbstractions/1.0.1-beta": {
         "runtime": {
           "Microsoft.DotNet.InternalAbstractions.dll": {}
         }
       },
-      "Microsoft.DotNet.ProjectModel/1.0.0-rc4-003212": {
+      "Microsoft.DotNet.ProjectModel/1.0.0-rc4": {
         "dependencies": {
           "System.Runtime.Serialization.Primitives": "4.1.1",
-          "Microsoft.Extensions.DependencyModel": "1.0.1-beta-003212",
+          "Microsoft.Extensions.DependencyModel": "1.0.1-beta",
           "Newtonsoft.Json": "9.0.1",
           "NuGet.Packaging": "3.5.0-beta2-1484",
           "NuGet.RuntimeModel": "3.5.0-beta2-1484"
@@ -349,19 +349,19 @@
           "Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyModel/1.0.1-beta-003212": {
+      "Microsoft.Extensions.DependencyModel/1.0.1-beta": {
         "dependencies": {
-          "Microsoft.DotNet.InternalAbstractions": "1.0.1-beta-003212",
+          "Microsoft.DotNet.InternalAbstractions": "1.0.1-beta",
           "Newtonsoft.Json": "9.0.1"
         },
         "runtime": {
           "Microsoft.Extensions.DependencyModel.dll": {}
         }
       },
-      "Microsoft.Extensions.Testing.Abstractions/1.0.0-preview3-003212": {
+      "Microsoft.Extensions.Testing.Abstractions/1.0.0-preview3": {
         "dependencies": {
           "Newtonsoft.Json": "9.0.1",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4-003212",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc4",
           "Microsoft.DiaSymReader": "1.0.8",
           "Microsoft.DiaSymReader.Native": "1.4.0-rc2"
         },
@@ -372,7 +372,7 @@
     }
   },
   "libraries": {
-    "dotnet/1.0.0-preview3-003212": {
+    "dotnet/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -522,47 +522,47 @@
       "serviceable": true,
       "sha512": "sha512-FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw=="
     },
-    "Microsoft.DotNet.Archive/1.0.0-preview3-003212": {
+    "Microsoft.DotNet.Archive/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.Cli.Utils/1.0.0-preview3-003212": {
+    "Microsoft.DotNet.Cli.Utils/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.Compiler.Common/1.0.0-preview3-003212": {
+    "Microsoft.DotNet.Compiler.Common/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.Configurer/1.0.0-rc3-003212": {
+    "Microsoft.DotNet.Configurer/1.0.0-rc3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.Files/1.0.0-preview3-003212": {
+    "Microsoft.DotNet.Files/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.InternalAbstractions/1.0.1-beta-003212": {
+    "Microsoft.DotNet.InternalAbstractions/1.0.1-beta": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.ProjectModel/1.0.0-rc4-003212": {
+    "Microsoft.DotNet.ProjectModel/1.0.0-rc4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.DependencyModel/1.0.1-beta-003212": {
+    "Microsoft.Extensions.DependencyModel/1.0.1-beta": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Testing.Abstractions/1.0.0-preview3-003212": {
+    "Microsoft.Extensions.Testing.Abstractions/1.0.0-preview3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
