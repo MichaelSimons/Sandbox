@@ -24,7 +24,7 @@ namespace MemoryUser
                 }
 
                 Console.WriteLine("Consuming Memory...");
-                string[] strArray = new string[100000];
+                string[] strArray = new string[10000];
                 for (int i = 0; i < strArray.Length; i++)
                 {
                     strArray[i] = $"{i}{DateTime.Now}";
