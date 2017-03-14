@@ -9,13 +9,18 @@ namespace MemoryUser
         public static void Main(string[] args)
         {
             long targetMemoryUsage = long.Parse(args[0]);
-            long currentMemoryUsage;
+            long memoryUsageGrowthFactor = 10000;
+            if (args.Length ==2)
+            {
+                memoryUsageGrowthFactor = long.Parse(args[1]);
+            }
+
             List<string[]> arrays = new List<string[]>();
 
             while(true)
             {
                 Process currentProcess = Process.GetCurrentProcess();
-                currentMemoryUsage = currentProcess.WorkingSet64;
+                long currentMemoryUsage = currentProcess.WorkingSet64;
                 Console.WriteLine($"Current Memory Usage:  {currentMemoryUsage}");
 
                 if(currentMemoryUsage >= targetMemoryUsage)
