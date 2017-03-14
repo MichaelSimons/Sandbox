@@ -9,12 +9,7 @@ namespace MemoryUser
         public static void Main(string[] args)
         {
             long targetMemoryUsage = long.Parse(args[0]);
-            long memoryUsageGrowthFactor = 10000;
-            if (args.Length ==2)
-            {
-                memoryUsageGrowthFactor = long.Parse(args[1]);
-            }
-
+            long memoryUsageGrowthFactor = long.Parse(args[1]);
             List<string[]> arrays = new List<string[]>();
 
             while(true)
