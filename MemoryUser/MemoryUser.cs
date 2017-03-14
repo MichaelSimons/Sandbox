@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace MemoryUser
 {
@@ -32,8 +33,7 @@ namespace MemoryUser
                 arrays.Add(strArray);
             };
 
-            Console.WriteLine("Press 'Enter' to exit");
-            Console.ReadLine();
+            Thread.Sleep(60000);
         }
     }
 }
