@@ -11,7 +11,7 @@ namespace MemoryUser
         {
             long targetMemoryUsage = long.Parse(args[0]);
             long memoryUsageGrowthFactor = long.Parse(args[1]);
-            bool consumeMemory = bool.Parse(args[3]);
+            bool consumeMemory = bool.Parse(args[2]);
             List<string[]> arrays = new List<string[]>();
 
             while (true)
@@ -26,7 +26,7 @@ namespace MemoryUser
                 }
 
                 Console.WriteLine("Consuming Memory...");
-                string[] strArray = new string[10000];
+                string[] strArray = new string[memoryUsageGrowthFactor];
                 for (int i = 0; i < strArray.Length; i++)
                 {
                     strArray[i] = $"{i}{DateTime.Now}";
