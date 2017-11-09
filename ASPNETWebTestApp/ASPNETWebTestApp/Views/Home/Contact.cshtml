@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Dot Net Bot Says";
+    ViewBag.DotNetBot = SharedLibrary.Robot.GetBot("ASP.NET Rocks!");
+}
+<h2>@ViewBag.Title</h2>
+
+<address>
+    @Html.Raw(ViewBag.DotNetBot)
+</address>

@@ -1,0 +1,11 @@
+FROM msimons/aspnet-build:4.7.1-windowsservercore-ltsc2016 AS build-env
+
+WORKDIR /sln
+COPY . .
+
+RUN nuget.exe restore ASPNETWebTestApp.sln
+RUN msbuild ASPNETWebTestApp\ASPNETWebTestApp.csproj /p:DeployOnBuild=true /p:PublishProfile=FolderProfile.pubxml
+
+
+FROM microsoft/aspnet:4.7.1-windowsservercore-ltsc2016
+COPY --from=build-env /sln/ASPNETWebTestApp/PublishOutput /inetpub/wwwroot

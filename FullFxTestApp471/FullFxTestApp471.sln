@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject", "XUnitTe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{680549DD-7863-4FCC-A115-3E46CE841249}"
 	ProjectSection(SolutionItems) = preProject
-		Dockerfile = Dockerfile
+		.dockerignore = .dockerignore
+		Dockerfile.WindowsServerCore-1709 = Dockerfile.WindowsServerCore-1709
+		Dockerfile.WindowsServerCore-ltsc2016 = Dockerfile.WindowsServerCore-ltsc2016
 	EndProjectSection
 EndProject
 Global
