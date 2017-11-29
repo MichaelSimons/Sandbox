@@ -3,9 +3,17 @@ FROM msimons/aspnet-build:4.7.1-windowsservercore-ltsc2016 AS build-env
 WORKDIR /sln
 COPY . .
 
-RUN nuget.exe restore ASPNETWebTestApp.sln
-RUN msbuild ASPNETWebTestApp\ASPNETWebTestApp.csproj /p:DeployOnBuild=true /p:PublishProfile=FolderProfile.pubxml
+RUN nuget.exe restore WebApp.sln
+RUN msbuild.exe WebApp.sln /t:Build /p:Configuration=Release
+
+
+FROM build-env AS test-env
+RUN vstest.console.exe UnitTests/bin/Release/UnitTests.dll
+
+
+FROM build-env AS publish-env
+RUN msbuild WebApp/WebApp.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile.pubxml
 
 
 FROM microsoft/aspnet:4.7.1-windowsservercore-ltsc2016
-COPY --from=build-env /sln/ASPNETWebTestApp/PublishOutput /inetpub/wwwroot
+COPY --from=publish-env /sln/WebApp/PublishOutput /inetpub/wwwroot

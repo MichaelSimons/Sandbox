@@ -1,11 +1,13 @@
-FROM msimons/dotnet-framework-build:4.7.1-windowsservercore-1709 AS build-env
+FROM microsoft/dotnet-framework-build:4.7.1-windowsservercore-1709 AS build-env
 
 WORKDIR /sln
 COPY . .
 
-RUN NuGet restore FullFxTestApp471.sln
+RUN nuget.exe restore FullFxTestApp471.sln
 RUN msbuild.exe /t:Build /p:Configuration=Release /p:OutputPath=out FullFxTestApp471.sln
 
+
+FROM build-env AS test-env
 RUN vstest.console.exe MsTestProject/out/MsTestProject.dll
 RUN vstest.console.exe XUnitTestProject/out/XUnitTestProject.dll
 RUN vstest.console.exe NUnitTestProject/out/NUnitTestProject.dll

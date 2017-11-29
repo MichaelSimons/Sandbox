@@ -4,8 +4,16 @@ WORKDIR /sln
 COPY . .
 
 RUN nuget.exe restore ASPNETWebTestApp.sln
-RUN msbuild ASPNETWebTestApp\ASPNETWebTestApp.csproj /p:DeployOnBuild=true /p:PublishProfile=FolderProfile.pubxml
+RUN msbuild.exe ASPNETWebTestApp.sln /t:Build /p:Configuration=Release
+
+
+FROM build-env AS test-env
+RUN vstest.console.exe MsTestProject/bin/Release/MsTestProject.dll
+
+
+FROM build-env AS publish-env
+RUN msbuild ASPNETWebTestApp/ASPNETWebTestApp.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile.pubxml
 
 
 FROM microsoft/aspnet:4.7.1-windowsservercore-1709
-COPY --from=build-env /sln/ASPNETWebTestApp/PublishOutput /inetpub/wwwroot
+COPY --from=publish-env /sln/ASPNETWebTestApp/PublishOutput /inetpub/wwwroot
